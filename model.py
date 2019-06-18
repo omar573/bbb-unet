@@ -3,6 +3,7 @@ import os
 import skimage.io as io
 import skimage.transform as trans
 import numpy as np
+from tensorflow.keras import backend as k
 from keras.models import *
 from keras.layers import *
 from keras.optimizers import *
