@@ -19,7 +19,7 @@ model_checkpoint = ModelCheckpoint('unet_membrane.hdf5', monitor='loss',verbose=
 model.fit_generator(myGene,steps_per_epoch=300,epochs=5, callbacks=[model_checkpoint, #ks])
 #plot of accuracy gain/loss
 plt.plot(history.history['acc'])
-plt.plot(history.history['val_acc'])
+#plt.plot(history.history['val_acc'])
 plt.title('Model accuracy')
 plt.ylabel('Accuracy')
 plt.xlabel('Epoch')
