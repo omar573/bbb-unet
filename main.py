@@ -16,7 +16,7 @@ myGene = trainGenerator(2,'data/membrane/train','image','label',data_gen_args,sa
 model = unet()
 model_checkpoint = ModelCheckpoint('unet_membrane.hdf5', monitor='loss',verbose=1, save_best_only=True)
 ks=TensorBoard(log_dir="/your_full_path/logs/{}", histogram_freq=1, write_graph=True, write_grads=True, batch_size=10)
-model.fit_generator(myGene,steps_per_epoch=300,epochs=5,callbacks=[model_checkpoint, ks])
+model.fit_generator(myGene,steps_per_epoch=300,epochs=5, validation_split=0.2, callbacks=[model_checkpoint, ks])
 
 testGene = testGenerator("data/membrane/test")
 results = model.predict_generator(testGene,30,verbose=1)
