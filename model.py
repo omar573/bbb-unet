@@ -53,7 +53,10 @@ def unet(pretrained_weights = None,input_size = (256,256,1)):
     conv10 = Conv2D(1, 1, activation = 'sigmoid')(conv9)
 
     model = Model(input = inputs, output = conv10)
-
+    lr = 0.01
+    epochss = 5
+    decay = lr/epochss
+    sgd = SGD(lr=lrate, momentum=0.9, decay=decay, nesterov=False)
     model.compile(optimizer = sgd, loss = 'binary_crossentropy', metrics = ['accuracy'])
     
     #model.summary()
