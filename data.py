@@ -45,8 +45,8 @@ def adjustData(img,mask,flag_multi_class,num_class):
 
 
 
-def trainGenerator(batch_size,train_path,image_folder,mask_folder,aug_dict,image_color_mode = "grayscale",
-                    mask_color_mode = "grayscale",image_save_prefix  = "image",mask_save_prefix  = "mask",
+def trainGenerator(batch_size,train_path,image_folder,mask_folder,aug_dict,image_color_mode = "rgb",
+                    mask_color_mode = "rgb",image_save_prefix  = "image",mask_save_prefix  = "mask",
                     flag_multi_class = False,num_class = 2,save_to_dir = None,target_size = (256,256),seed = 1):
     '''
     can generate image and mask at the same time
@@ -82,7 +82,7 @@ def trainGenerator(batch_size,train_path,image_folder,mask_folder,aug_dict,image
 
 
 
-def testGenerator(test_path,num_image = 4,target_size = (256,256),flag_multi_class = False,as_gray = True):
+def testGenerator(test_path,num_image = 4,target_size = (256,256),flag_multi_class = False,as_gray = False):
     for i in range(num_image):
         img = io.imread(os.path.join(test_path,"%d.jpg"%i),as_gray = as_gray)
         img = img / 255
@@ -92,7 +92,7 @@ def testGenerator(test_path,num_image = 4,target_size = (256,256),flag_multi_cla
         yield img
 
 
-def geneTrainNpy(image_path,mask_path,flag_multi_class = False,num_class = 2,image_prefix = "image",mask_prefix = "mask",image_as_gray = True,mask_as_gray = True):
+def geneTrainNpy(image_path,mask_path,flag_multi_class = False,num_class = 2,image_prefix = "image",mask_prefix = "mask",image_as_gray = False,mask_as_gray = False):
     image_name_arr = glob.glob(os.path.join(image_path,"%s*.jpg"%image_prefix))
     image_arr = []
     mask_arr = []
