@@ -26,6 +26,6 @@ model.fit_generator(myGene,steps_per_epoch=300,epochs=5, callbacks=[model_checkp
 #plt.legend(['Train', 'Test'], loc='upper left')
 #plt.show()
 
-testGene = testGenerator("data/membrane/test")
+testGene = testGenerator("data/membrane/test2")
 results = model.predict_generator(testGene,30,verbose=1)
-saveResult("data/membrane/test",results)
+saveResult("data/membrane/test2",results)
