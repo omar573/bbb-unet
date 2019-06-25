@@ -11,20 +11,12 @@ data_gen_args = dict(rotation_range=0.2,
                     zoom_range=0.05,
                     horizontal_flip=True,
                     fill_mode='nearest')
-myGene = trainGenerator(2,'data/membrane/train2','image','label',data_gen_args,save_to_dir = None)
+myGene = trainGenerator(1,'data/membrane/train2','image','label',data_gen_args,save_to_dir = None)
 
 model = unet()
 model_checkpoint = ModelCheckpoint('unet_membrane.hdf5', monitor='loss',verbose=1, save_best_only=True)
-#ks=TensorBoard(log_dir="/your_full_path/logs/{}", histogram_freq=1, write_graph=True, write_grads=True, batch_size=10)
-model.fit_generator(myGene,steps_per_epoch=300,epochs=1, callbacks=[model_checkpoint])
-#plot of accuracy gain/loss
-#plt.plot(history.history['acc'])
-#plt.plot(history.history['val_acc'])
-#plt.title('Model accuracy')
-#plt.ylabel('Accuracy')
-#plt.xlabel('Epoch')
-#plt.legend(['Train', 'Test'], loc='upper left')
-#plt.show()
+model.fit_generator(myGene,steps_per_epoch=300,epochs=3, callbacks=[model_checkpoint])
+
 
 testGene = testGenerator("data/membrane/test2")
 results = model.predict_generator(testGene,4,verbose=1)
