@@ -15,7 +15,7 @@ myGene = trainGenerator(1,'data/membrane/train2','image','label',data_gen_args,s
 
 model = unet()
 model_checkpoint = ModelCheckpoint('unet_membrane.hdf5', monitor='loss',verbose=1, save_best_only=True)
-model.fit_generator(myGene,steps_per_epoch=300,epochs=4, callbacks=[model_checkpoint])
+model.fit_generator(myGene,steps_per_epoch=300,epochs=5, callbacks=[model_checkpoint])
 
 
 testGene = testGenerator("data/membrane/test2")
