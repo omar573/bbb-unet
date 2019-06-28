@@ -19,5 +19,5 @@ model.fit_generator(myGene,steps_per_epoch=500,epochs=4, callbacks=[model_checkp
 
 
 testGene = testGenerator("data/membrane/test2")
-results = model.predict_generator(testGene,4,verbose=1)
+results = model.predict_generator(testGene,3,verbose=1)
 saveResult("data/membrane/test2",results)
