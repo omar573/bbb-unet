@@ -9,7 +9,7 @@ Medical Image Computing and Computer-Assisted Intervention (MICCAI), Springer, L
  
 The motivation behind pursuing this tool stems from the need to quantify a multitude of cell data, in this case Blood-Brain Barrier cell data,
 for the purpose of analyzing the impacts of HIV-1 Tat Proteins on the Blood-Brain Barrier (BBB hereafter). While manual segmentation by hand is an option,
-it is very slow and time-consuming. Researchers face a high opportunity cost on time when engaging in this process of manual segmentation. A trained Unet deep
+it is very slow and time-consuming. Researchers face a high opportunity cost on time when engaging in this time-consuming process of manual segmentation. However, a trained Unet deep
 learning model can segment thousands of cells in a few seconds versus manual segmentation by hand which takes, on average, 15 minutes
 per image to complete.
  
