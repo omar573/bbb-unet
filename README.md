@@ -44,7 +44,7 @@ Medical Image Computing and Computer-Assisted Intervention (MICCAI), Springer, L
  
 ### Results
  
-The trained model achieves good results with 97% accuracy. Here is a sample visualization to illustrate the successful implementation of Unet on BBB microscopy images:
+The trained model achieves good results with 97% accuracy. This visualization illustrates the successful implementation of Unet on BBB microscopy images:
  
 ![img/with_fitc.gif](img/with_fitc.gif)
  
