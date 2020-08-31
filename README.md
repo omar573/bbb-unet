@@ -49,7 +49,8 @@ The trained model achieves good results with 97% accuracy. This visualization il
 ![img/with_fitc.gif](img/with_fitc.gif)
  
  
-Credit: Professor Will Dampier, Drexel University College of Medicine. The left column shows how Unet improves with each epoch. The right column shows masks from a test set.
+The left column shows how Unet improves with each epoch. The right column shows masks from a test set.
+Credit: Professor Will Dampier, Drexel University College of Medicine, 2019. 
  
  
  
