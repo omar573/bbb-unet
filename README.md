@@ -58,8 +58,8 @@ Credit: Professor Will Dampier, Drexel University College of Medicine, 2019.
 ### Post-processing
  
 The deep learning implementation produces predicted masks for each microscopy image. Predicted masks require post-processing to turn them into
-quantitative data that are suitable for statistical analysis. The file named "Json mask parser.ipynb" contains code that parses cell coordinates from predicted masks, extracts features like area, aspect ratio and perimeter, and produces an organized data frame in CSV format.
-For some exploration of a sample data frame using Pandas and Seaborn, please see the file named "Descriptives and Visualizations.ipynb".
+quantitative data that are suitable for statistical analysis. The file named "JSON mask parser.ipynb" contains code that parses cell coordinates from predicted masks, extracts features like area, aspect ratio and perimeter, and produces an organized data frame in CSV format.
+For some exploration of a sample data frame using Pandas and Seaborn, please see the file named "Descriptives and visualizations.ipynb".
  
  
  
