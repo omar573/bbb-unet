@@ -59,6 +59,6 @@ Credit: Will Dampier, Informatics, Drexel University , 2019.
  
 The deep learning implementation produces predicted masks for each microscopy image. Predicted masks require post-processing to turn them into
 quantitative data that are suitable for statistical analysis. The file named "JSON mask parser.ipynb" contains code that parses cell coordinates from predicted masks, extracts features like area, aspect ratio and perimeter, and produces an organized data frame in CSV format.
-For some exploration of a sample data frame using Pandas and Seaborn, please see the file named "Descriptives and visualizations.ipynb". The file named "autoencoder" includes a machine learning model called autoencoder which helps in detecting any anomalies in the data and reduce any noise in the data before preforming statistical analyses. I included a visualization at the end of the autoencoder file that shows how the autoencoder can predict irregularly shaped cells (labeled in blue) versus regularly shaped cells (labeled in black).
+For some exploration of a sample data frame using Pandas and Seaborn, please see the file named "Descriptives and visualizations.ipynb". The file named "autoencoder" includes a machine learning model called autoencoder that helps in detecting anomalies in the data before preforming statistical analyses. I included a visualization at the end of the autoencoder file that shows how the autoencoder can identify irregularly shaped cells (labeled in blue) versus regularly shaped cells (labeled in black).
  
 
