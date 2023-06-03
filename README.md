@@ -22,7 +22,7 @@ Here is an example of what a sample data frame looks like:
  
 ## Data
  
-The raw input datadata consist of microscopy images of BBB cells like the following:
+The raw input data consist of microscopy images of BBB cells like the following:
  
 ![data/membrane/train2/image/0.png](data/membrane/train2/image/0.png)
  
