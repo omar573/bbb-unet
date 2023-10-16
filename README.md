@@ -35,7 +35,7 @@ Medical Image Computing and Computer-Assisted Intervention (MICCAI), Springer, L
  
 ### Results
  
-The  trained model boasts an impressive accuracy rate of 98%. Below is a visualization exemplifying the successful application of U-Net on BBB microscopy images:
+The  trained model boasts an impressive accuracy rate of 98%. Below is a visualization exemplifying the successful application of U-Net on BBB microscopy images (press play button to see visualization):
  
 ![img/with_fitc.gif](img/with_fitc.gif)
  
