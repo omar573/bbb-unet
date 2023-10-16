@@ -4,9 +4,9 @@
  
 ## Introduction
 
-Contained herein is a machine learning framework, guiding the user from raw microscopy images to a structured data frame encapsulating quantifiable cell attributes, such as area and perimeter.
+I have included here a machine learning model and framework, guiding the user from raw microscopy images to a structured data frame encapsulating quantifiable cell attributes, such as area and perimeter.
 
-The impetus for adopting this computational model arises from the necessity to accurately quantify cell metrics, specifically focusing on Blood-Brain Barrier (BBB) cells. This endeavor seeks to quantitatively demonstrate the consequences of HIV-1 Tat Proteins on the BBB. Traditional methods, like manual segmentation, though possible, are markedly inefficient, posing considerable temporal constraints on researchers. Contrastingly, a proficiently trained U-Net deep learning model showcases its prowess by segmenting thousands of cells within mere seconds, in stark juxtaposition to the manual process which averages 15 minutes per image.
+This computational AI model arises from the necessity to accurately quantify large amounts of cell metrics, specifically focusing on Blood-Brain Barrier (BBB) cells. This endeavor seeks to quantitatively demonstrate the consequences of HIV drug treatment on brain cells. Traditional methods such as manual segmentation are markedly inefficient, posing considerable temporal constraints on researchers. For example, a proficiently trained U-Net deep learning model showcases its usefulness by segmenting thousands of cells within seconds, in comparison to the manual process which averages 15 minutes per image.
 
 ## Data
  
@@ -15,10 +15,10 @@ The raw input data consist of microscopy images of BBB cells like the following:
 ![data/membrane/train2/image/0.png](data/membrane/train2/image/0.png)
  
  
-The folder data/membrane houses a selection of microscopy images along with their corresponding masks, vital for U-Net training
+The folder data/membrane contains a selection of microscopy images along with their corresponding masks to train the AI model.
 
 
-The code contained in this repository turns the raw data above into a quantitative data frame that can be analyzed statistically. Here is an example:
+The code in this repository turns the raw data above into a quantitative data frame that can be analyzed statistically. Here is an example:
  
 ![img/df_sample.jpg](img/df_sample.jpg)
  
@@ -35,12 +35,12 @@ Medical Image Computing and Computer-Assisted Intervention (MICCAI), Springer, L
  
 ### Results
  
-The meticulously trained model boasts an impressive accuracy rate of 98%. Below is a visualization exemplifying the successful application of U-Net on BBB microscopy images:
+The  trained model boasts an impressive accuracy rate of 98%. Below is a visualization exemplifying the successful application of U-Net on BBB microscopy images:
  
 ![img/with_fitc.gif](img/with_fitc.gif)
  
  
-The left visual stream delineates U-Net's progressive enhancement through epochs. The right delineates manually-segmented test set masks.
+The left visual stream delineates U-Net's progressive enhancement through epochs. The right delineates manually segmented test set masks.
 
 Credit: Will Dampier, Drexel University, 2019. 
  
@@ -48,4 +48,4 @@ Credit: Will Dampier, Drexel University, 2019.
  
 ### Post-processing
  
-Following deep learning-based segmentation, the anticipated masks necessitate further refinement to transition into analytically viable quantitative data. The file "JSON mask parser.ipynb" embodies the code responsible for parsing cellular coordinates from the forecasted masks, and subsequently extracting pertinent features leading to a systematic CSV data frame. The "Descriptives and visualizations.ipynb" file provides a glimpse into some preliminary data explorations using Pandas and Seaborn. Furthermore, the "autoencoder" file integrates an autoencoder machine learning model to perform anomaly detection in the data pre-analysis. The culmination of the autoencoder documentation presents a visualization contrasting regular (black) and anomalous (blue) cellular shapes.
+Following deep learning-based segmentation, the anticipated masks require further refinement to transition them into analytically viable quantitative data. The file "JSON mask parser.ipynb" includes custom code responsible for parsing cellular coordinates from the AI-generated masks and subsequently extracting pertinent features such as the area and perimeter of each cell into CSV data frame. The "Descriptives and visualizations.ipynb" file provides a simple overview of some preliminary data explorations using Pandas and Seaborn. Lastly, the "autoencoder" file integrates an autoencoder machine learning model to perform anomaly detection on the final data. The autoencoder documentation presents a visualization contrasting regular (black) and anomalous (blue) cellular shapes, providing new quantitative methodology for analyzing rates of infection in cell data.
